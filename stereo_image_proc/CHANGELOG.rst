@@ -2,6 +2,37 @@
 Changelog for package stereo_image_proc
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+6.0.2 (2024-07-23)
+------------------
+* Removed deprecation warnings (`#1010 <https://github.com/ros-perception/image_pipeline/issues/1010>`_)
+* Contributors: Alejandro Hernández Cordero
+
+6.0.1 (2024-07-22)
+------------------
+* Updated deprecated message filter headers (`#1012 <https://github.com/ros-perception/image_pipeline/issues/1012>`_)
+* Contributors: Alejandro Hernández Cordero
+
+6.0.0 (2024-05-27)
+------------------
+
+5.0.1 (2024-03-26)
+------------------
+* DisparityNode: replace full_dp parameter with sgbm_mode (`#945 <https://github.com/ros-perception/image_pipeline/issues/945>`_)
+  Previously, only the SGBM and HH modes were allowed
+* unified changelog, add missing image, deduplicate tutorials (`#938 <https://github.com/ros-perception/image_pipeline/issues/938>`_)
+  Last bit of documentation updates - putting together a single changelog
+  summary for the whole release (rather than scattering among packages).
+  Unified the camera_info tutorial so it isn't duplicated. Added a missing
+  image from image_rotate (was on local disk, but hadn't committed it)
+* migrate stereo_image_proc docs (`#928 <https://github.com/ros-perception/image_pipeline/issues/928>`_)
+* QoS improvements for image_proc and stereo_image_proc (`#922 <https://github.com/ros-perception/image_pipeline/issues/922>`_)
+  First part of `#847 <https://github.com/ros-perception/image_pipeline/issues/847>`_
+  * Add QoS overrides for all publishers (in the new, standard way)
+  * stereo_image_proc: Default subscriber QoS to SensorDataQoS
+  * Clean up some of the comments around lazy subscribers, make them more
+  consistent across nodes
+* Contributors: Michael Ferguson, Pablo David Aranda Rodríguez
+
 5.0.0 (2024-01-24)
 ------------------
 * stereo_image_proc: cleanup cmake (`#904 <https://github.com/ros-perception/image_pipeline/issues/904>`_)

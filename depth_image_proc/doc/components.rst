@@ -116,6 +116,8 @@ Parameters
    for the depth topic subscriber.
  * **queue_size** (int, default: 5): Size of message queue for synchronizing
    subscribed topics.
+ * **invalid_depth** (double, default: 0.0): Value used for replacing invalid depth
+   values (if 0.0 the parameter has no effect).
 
 depth_image_proc::PointCloudXyzRadialNode
 -----------------------------------------
@@ -165,6 +167,8 @@ Parameters
    the intensity image subscriber.
  * **queue_size** (int, default: 5): Size of message queue for synchronizing
    subscribed topics.
+ * **invalid_depth** (double, default: 0.0): Value used for replacing invalid depth
+   values (if 0.0 the parameter has no effect).
 
 depth_image_proc::PointCloudXyziRadialNode
 ------------------------------------------
@@ -235,6 +239,8 @@ Parameters
  * **exact_sync** (bool, default: False): Whether to use exact synchronizer.
  * **queue_size** (int, default: 5): Size of message queue for synchronizing
    subscribed topics.
+ * **invalid_depth** (double, default: 0.0): Value used for replacing invalid depth
+   values (if 0.0 the parameter has no effect).
 
 depth_image_proc::PointCloudXyzrgbRadialNode
 --------------------------------------------
@@ -291,6 +297,8 @@ Parameters
 ^^^^^^^^^^
  * **depth_image_transport** (string, default: raw): Image transport to use
    for depth subscriber.
+ * **use_rgb_timestamp** (bool, default: false) : use timestamp of rgb image instead of depth image for the registered image.
+ * **fill_upsampling_holes** (bool, default: false) : when RGB is higher res, interpolate by rasterizing depth triangles onto the registered image.
  * **queue_size** (int, default: 5): Size of message queue for synchronizing
    subscribed topics.
 
